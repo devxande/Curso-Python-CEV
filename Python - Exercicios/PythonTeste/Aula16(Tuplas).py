@@ -10,6 +10,9 @@
 # for c in lanche: mostra cada posição.
 #   print(c)
 
+#print(max(TUPLA)) - Mostra o maior valor.
+#print(min(TUPLA)) - Mostra o maior valor.
+
 # Utiliza () para as tuplas.
 lanche = ('hamburguer', 'suco', 'pizza', 'pudim')
 pos = 0

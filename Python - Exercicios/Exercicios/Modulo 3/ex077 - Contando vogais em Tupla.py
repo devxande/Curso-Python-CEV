@@ -1,5 +1,7 @@
-# Tupla com varias palavras, sem acento;
-# Mostrar para cada palavra quantidade de vogais.
+# Exercício Python 077: Crie um programa que tenha uma tupla
+# com várias palavras (não usar acentos).
+# Depois disso, você deve mostrar, para cada palavra, quais são as suas vogais.
+
 from random import randint
 palavras = (
     'Preto', 'Vermelho', 'Verde', 'Amarelho',
@@ -15,4 +17,9 @@ for c in range(0,len(palavras)):
     vogais += palavras[c].lower().count("u")
     print(f'A palavra ->\033[3{randint(1,8)}m{palavras[c]:^15}\033[m<- tem: {vogais} vogais! ')
 
-print('PAçoca')
+for p in palavras:
+    print(f'\nNa palvra {p} temos: ',end='')
+    for letra in p:
+        if letra.lower() in 'aeiou':
+            print(f'\033[3{randint(1,8)}m{letra}\033[m',end=' ',)
+

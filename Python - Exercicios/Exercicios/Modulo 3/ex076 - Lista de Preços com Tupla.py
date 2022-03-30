@@ -11,9 +11,17 @@ produtos = ('Memoria Ram', 200,
             'Fans', 150.00,
             'Inooth', 1000.00
             )
-print(F'''{30*"-"}
-{"LISTAGEM DE PREÇOS":^30}
-{30*"-"}''')
-for c in range(0,(len(produtos)),2):
-    print(f'{produtos[c]:.<20}{produtos[c+1]:.>10.2f}')
-print(30*"-")
+print(F'''{40*"-"}
+{"LISTAGEM DE PREÇOS":^40}
+{40*"-"}''')
+# for c in range(0,(len(produtos)),2):
+#     print(f'{produtos[c]:.<20}{produtos[c+1]:.>10.2f}')
+# print(30*"-")
+
+# Resolução
+for pos in range(0,len(produtos)):
+    if pos % 2 ==0:
+        print(f'{produtos[pos]:.<30}',end='')
+    else:
+        print(f'R${produtos[pos]:>8.2f}')
+print(40*"-")

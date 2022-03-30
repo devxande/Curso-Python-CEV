@@ -15,3 +15,4 @@ for c in range(0,len(palavras)):
     vogais += palavras[c].lower().count("u")
     print(f'A palavra ->\033[3{randint(1,8)}m{palavras[c]:^15}\033[m<- tem: {vogais} vogais! ')
 
+print('PAçoca')

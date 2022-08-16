@@ -29,8 +29,8 @@ for cont in range(0, len(lanche)):
 print(lanche[:2])
 print(sorted(lanche))  # Coloca em ordem alfabetica ou numerica
 
-a = (2, 5, 4)
-b = (5, 8, 1, 2)
+a = (2, 8, 4)
+b = (5, 8, 1, 8)
 c = b + a
 print(c)  # Mostra a junção das tuplas e nao o somatório dos valores.
 print(c.count(2))  # Mostra quantas vezes o numero 2 aparece.

@@ -1,6 +1,6 @@
-# Exercício Python 078: Faça um programa que leia 5 valores numéricos e guarde-os em uma lista.
+# Exercício Python 078: faça um programa que leia 5 valores numéricos e guarde-os numa lista.
 # No final, mostre qual foi o maior e o menor valor digitado
-# e as suas respectivas posições na lista.
+# e as suas respetivas posições na lista.
 
 posicaoMaior = posicaoMenor = pos = 0
 valores = []

@@ -7,47 +7,44 @@
 # D) Uma lista de pessoas com idade acima da média
 pessoa = {}
 listaPessoas = []
-sexoVerificar=' '
+sexoVerificar = ' '
 idadeTotal = 0
 while True:
     pessoa['nome'] = str(input('Digite o nome: '))
     sexoVerificar = ' '
     while sexoVerificar not in 'MF':
         sexoVerificar = str(input('Digite o sexo: ')).upper().strip()[0]
-    pessoa['sexo']=sexoVerificar
-    pessoa['idade'] = int(input('Digite a idade: '))
+    pessoa['sexo'] = sexoVerificar
+    pessoa['idade'] = float(input('Digite a idade: '))
     idadeTotal += pessoa['idade']
     listaPessoas.append(pessoa.copy())
 
-
-
-
-    #Sair
+    # Sair
     sair = ' '
     while sair not in 'SN':
-        sair=str(input('Adicionar nova pessoa? [S/N]')).upper().strip()[0]
+        sair = str(input('Adicionar nova pessoa? [S/N]')).upper().strip()[0]
     if sair == 'N':
         break
 
-#Pessoas Cadastradas
-print(f'\n{"-=-"*15}')
+# Pessoas Cadastradas
+print(f'\n{"-=-" * 15}')
 print(f'A) Quantidade de Pessoas Cadastradas: {len(listaPessoas)}\n')
 
-#Media de idade
+# Media de idade
 
-print(f'B) A media das idades é -> {idadeTotal/len(listaPessoas)} anos\n')
+print(f'B) A media das idades é -> {idadeTotal / len(listaPessoas):5.2f} anos\n')
 
-#Lista com mulheres
-print(f'C) As Mulheres Cadastradas foram: ',end='')
+# Lista com mulheres
+print(f'C) As Mulheres Cadastradas foram: ', end='')
 for pos in listaPessoas:
     if pos['sexo'] == 'F':
-        print(f'{pos["nome"]}',end='; ')
-
-#Lista de pessoas acima da media
+        print(f'{pos["nome"]}', end='; ')
+print()
+# Lista de pessoas acima da media
 print(f'\nD) Idades acima da MÉDIA: ')
 for pos in listaPessoas:
-    if pos['idade'] > (idadeTotal/len(listaPessoas)):
+    if pos['idade'] > (idadeTotal / len(listaPessoas)):
         for k, v in pos.items():
-            print(f'{k} = {v}; ',end='')
+            print(f'{k} = {v}; ', end='')
         print('')
 print('-=-' * 15)

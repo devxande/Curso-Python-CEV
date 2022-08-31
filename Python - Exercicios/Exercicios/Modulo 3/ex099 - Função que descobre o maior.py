@@ -1,6 +1,10 @@
-# criar funçao maior()
-# Recebe varios parametros inteiros
-# mostrar qual deles é o maior.
+# Exercício Python 099: Faça um programa que tenha uma função chamada maior(),
+# que receba vários parâmetros com valores inteiros.
+# Seu programa tem que analisar todos os valores e dizer qual deles é o maior.
+
+from time import sleep
+
+
 def lin():
     print(f'-=-' * 20)
 
@@ -10,10 +14,11 @@ def maior(lst):
     print('Analisando os valores passados...')
     pos = 0
     while pos < len(lst):
+        sleep(0.3)
         print(f'{lst[pos]}', end=' ')
         pos += 1
-    print(f'Foram informados {len(lst)} ao todo.')
-    print(f'O maior valor informado foi o {max(lst)}')
+    print(f'\nForam informados {len(lst)} números ao todo.')
+    print(f'O maior valor informado foi o {max(lst)}.')
 
 
 # PROGRAMA PRINCIPAL

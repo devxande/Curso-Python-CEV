@@ -1,12 +1,6 @@
-# Criar uma funçao voto()
-# Recebe como parametro o ano de nascimento
-# Retorna um valor inteiro
-# Indicando tem o voto Negado -18, Obrigatorio ou opcional+65
-
-
-from datetime import datetime
-
-
+# Exercício Python 101: Crie um programa que tenha uma função chamada voto()
+# que vai receber como parâmetro o ano de nascimento de uma pessoa,
+# retornando um valor literal indicando se uma pessoa tem voto NEGADO, OPCIONAL e OBRIGATÓRIO nas eleições.
 def linha():
     """
     ->Cria uma linha divisória
@@ -19,6 +13,7 @@ def voto(num):
     -> Mostra a situação eleitoral da pessoa pelo ano de nascimento.
     :param num: idade da pessoa
     """
+    from datetime import datetime
     idade = datetime.now().year - num
     if idade < 18:
         print(f'Com {idade} anos: VOTO NEGADO.')

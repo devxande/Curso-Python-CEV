@@ -1,9 +1,7 @@
-# Criar uma funçao fatorial()
-# Recebe os parametros:
-# 1- numero a calcular
-# 2- se quer ou nao mostrar o calculo
-
-
+# Exercício Python 102: Crie um programa que tenha uma função fatorial()
+# que receba dois parâmetros: o primeiro que indique o número a calcular
+# e outro chamado show, que será um valor lógico (opcional)
+# indicando se será mostrado ou não na tela o processo de cálculo do fatorial.
 def fatorial(num=1, show=False):
     """
     -> Calcula o Fatorial de um número.
@@ -12,15 +10,15 @@ def fatorial(num=1, show=False):
     :return: o valor do Fatorial de um número n.
     """
     f = 1
-    if show==True:
-        print(num,end=' ')
-        for c in range(num,1,-1):
-            f*=c
-            print(f'x {c-1}',end=' ')
+    if show == True:
+        print(num, end=' ')
+        for c in range(num, 1, -1):
+            f *= c
+            print(f'x {c - 1}', end=' ')
         print(f'= {f}')
-    if show == False:
-        for c in range(num,1,-1):
-            f*=c
+    else:
+        for c in range(num, 1, -1):
+            f *= c
         print(f)
 
 
@@ -42,6 +40,3 @@ if opcao == 'S':
 if opcao == 'N':
     fatorial(num)
 linha()
-
-
-

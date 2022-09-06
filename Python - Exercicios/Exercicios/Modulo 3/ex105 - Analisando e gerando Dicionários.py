@@ -1,12 +1,20 @@
-# Criar uma funçao notas()
-# Recebe varias notas
-# Retornar as informações:
-# Quantidade de notas; len()
-# A maior; A menor; A média;
-# e situação 7=boa
+# Exercício Python 105: Faça um programa que tenha uma função notas()
+# que pode receber várias notas de alunos
+# e vai retornar um dicionário com as seguintes informações:
+# – Quantidade de notas
+# – A maior nota
+# – A menor nota
+# – A média da turma
+# – A situação (opcional)
 
 
 def notas(*num, sit=False):
+    """
+    -> Função para analisar notas e situações de vários alunos.
+    :param num: Uma ou mais notas dos alunos (aceita várias)
+    :param sit: valor opcional, indica se deve ou não adicionar a situação
+    :return: dicionário com várias informações sobre a situação da turma.
+    """
     turma = {
         'total': len(num),
         'maior': 0,
@@ -35,5 +43,6 @@ def notas(*num, sit=False):
 
 
 # Código Principal
-resp = notas(2, 2, 5.5, 5, sit=False)
+resp = notas(9, 9, 5.5, 10, sit=True)
 print(resp)
+help(notas)

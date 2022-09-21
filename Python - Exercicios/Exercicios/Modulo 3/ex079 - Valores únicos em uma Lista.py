@@ -18,6 +18,7 @@ while True:
         sair = str(input('Gostaria de adicionar mais valores? [S/N]')).upper().strip()[0]
     if sair == 'N':
         break
+print(sorted(valores))
 
 valores.sort()
 print(f'''\n**Exibindo resultados**
